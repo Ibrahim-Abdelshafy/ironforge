@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Background: #0a0a0a;
+    --section-alt-bg:#111111;
+    --card-bg:#161616;
+    --accent:#e63946;
+    --accent-dark:#c1121f;
+    --text:#ffffff;
+    --subtle:#999999;
+    --border:#222222;
+}
+
+body {
+    background-color: var(--Background);
+    color: var(--text);
+    padding: 15px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar h1 {
+    color: var(--accent);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: var(--subtle);
+}
+
+.navbar ul a:hover {
+    color: var(--accent);
+}
+
+.navbar button {
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar button:hover {
+    transform: translateY(-3px);
+    background-color: var(--accent-dark);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero h2 {
+    text-align: center;
+    font-size: 52px;
+    padding: 10px;
+    color: var(--text);
+}
+
+.hero p {
+    text-align: center;
+    color: var(--subtle);
+    font-size: 18px;
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn1 {
+    background-color: var(--accent);
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 2px solid var(--border);
+    padding: 10px;
+    border-radius: 6px;
+    color: var(--text);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-5px);
+}
+
+.btn2:hover {
+    color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-5px);
+}
+.classes {
+    background-color: var(--section-alt-bg);
+    padding: 10px;
+}
+
+.classes h2 {
+    font-size: 52px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+.strength,
+.cardio,
+.yoga {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+    width: calc(100%/3);
+    transition: 0.5s;
+
+}
+
+.strength:hover,
+.cardio:hover,
+.yoga:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.placeholder {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    background-color: var(--accent);
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 52px;
+    margin-bottom: 5px;
+}
+
+.cards-p {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+.starter,
+.pro,
+.elite {
+     background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+    width: calc(100%/3);
+    transition: 0.5s;
+}
+
+.pricing {
+    padding: 10px;
+}
+
+.pro {
+    border-color: var(--accent);
+}
+
+.starter ul,
+.pro ul ,
+.elite ul {
+    list-style: none;
+}
+
+.starter ul li::before,
+.pro ul li::before,
+.elite ul li::before {
+    content: "✓";
+    color: var(--accent);
+    padding-right: 10px;
+}
+
+.starter:hover,
+.pro:hover,
+.elite:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.cards-p button {
+    background-color: var(--accent);
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.5s;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cards-p button:hover {
+    transform: translateY(-3px);
+}
+
+
+footer {
+    background-color: var(--section-alt-bg);
+    text-align: center;
+    padding: 10px;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px;
+    list-style: none;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: var(--subtle);
+}
+
+footer ul a:hover {
+    color: var(--accent);
+}
+
+@media (max-width:768px) {
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cards-p {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .starter,
+    .pro,
+    .elite {
+        width: 100%;
+    }
+
+    .strength,
+    .cardio,
+    .yoga {
+        width: 100%;
+    }
+
+    .navbar{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .buttons {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .navbar button {
+        margin: 10px;
+    }
+
+    .navbar h1 {
+        margin: 10px;
+    }
+}
